@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  # Cancel the previous builds in the same PR.
+  # Allow running concurrently for all non-PR commits.
+  group: ci-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  ci:
+    strategy:
+      matrix:
+        go-version: [^1.17, ^1.18]
+        platform: [ubuntu-latest]
+        include:
+          - platform: ubuntu-latest
+            run-fmt: true
+
+          # Include windows, but only with Go mainline version, since there
+          # is very little in the library that is platform specific
+          - platform: windows-latest
+            go-version: ^1.17
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup go env
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go-version }}
+
+      - name: Cache go modules
+        uses: actions/cache@v3
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: ${{ runner.os }}-go-
+
+      - name: Run tests
+        run: go test ./... -v -race -cover
+
+      - name: Run linter
+        uses: golangci/golangci-lint-action@v3
+        with:
+          version: latest
+
+      - name: Run formatter
+        if: ${{ matrix.run-fmt }}
+        run: diff -u <(echo -n) <(gofmt -d -s .)
+
+      - name: Run go vet
+        run: go vet ./...

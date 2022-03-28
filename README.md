@@ -1,5 +1,7 @@
 # garr
 
+![Test](https://github.com/line/garr/actions/workflows/test.yml/badge.svg)
+
 Collection of high performance, thread-safe, lock-free go data structures.
 
 * [adder](./adder/README.md) - Data structure to perform highly-performant sum under high contention. Inspired by [OpenJDK LongAdder](https://openjdk.java.net/)

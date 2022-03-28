@@ -20,8 +20,8 @@ import (
 	"time"
 	"unsafe"
 
-	ga "github.com/line/garr/adder"
-	queue "github.com/line/garr/queue"
+	ga "go.linecorp.com/garr/adder"
+	queue "go.linecorp.com/garr/queue"
 )
 
 // bucket hold the count of events within {@code updateInterval}.

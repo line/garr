@@ -18,7 +18,7 @@ import (
 	"runtime"
 	"sync/atomic"
 
-	"github.com/line/garr/internal"
+	"go.linecorp.com/garr/internal"
 )
 
 var maxCells int

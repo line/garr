@@ -14,7 +14,7 @@ Inspired by [line/armeria](https://github.com/line/armeria) circuit breaker. Thi
 package main
 
 import (
-    cbreaker "github.com/line/garr/circuit-breaker"
+    cbreaker "go.linecorp.com/garr/circuit-breaker"
 )
 
 func main() {
@@ -43,7 +43,7 @@ Circuit breaker builder comes with set of default parameters that you can custom
 package main
 
 import (
-    cbreaker "github.com/line/garr/circuit-breaker"
+    cbreaker "go.linecorp.com/garr/circuit-breaker"
 )
 
 func main() {
@@ -106,7 +106,7 @@ You can make a custom listener and hook it into the circuit breaker so that the 
 package main
 
 import (
-    cbreaker "github.com/line/garr/circuit-breaker"
+    cbreaker "go.linecorp.com/garr/circuit-breaker"
 )
 
 func main() {

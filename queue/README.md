@@ -10,7 +10,7 @@ High performance and thread-safe queue(s) for Go:
 package main
 
 import (
-    "github.com/line/garr/queue"
+    "go.linecorp.com/garr/queue"
 )
 
 func main() {

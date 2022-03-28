@@ -11,7 +11,7 @@ import (
    "log"
    "runtime"
 
-   workerpool "github.com/line/garr/worker-pool"
+   workerpool "go.linecorp.com/garr/worker-pool"
 )
 
 // task closure

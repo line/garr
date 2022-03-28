@@ -19,7 +19,7 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/line/garr/internal"
+	"go.linecorp.com/garr/internal"
 )
 
 // JDKLinkedQueue represents jdk-based concurrent non blocking linked-list queue.

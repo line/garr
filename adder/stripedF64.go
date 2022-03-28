@@ -18,7 +18,7 @@ import (
 	"math"
 	"sync/atomic"
 
-	"github.com/line/garr/internal"
+	"go.linecorp.com/garr/internal"
 )
 
 type cellf64 struct {

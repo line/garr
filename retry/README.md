@@ -14,7 +14,7 @@ Supporting backoff strategies:
 package main
 
 import (
-    "github.com/line/garr/retry"
+    "go.linecorp.com/garr/retry"
 )
 
 func main() {

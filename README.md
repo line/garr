@@ -1,6 +1,8 @@
-# garr
+# Garr
 
-![Test](https://github.com/line/garr/actions/workflows/test.yml/badge.svg)
+![CI](https://github.com/line/garr/actions/workflows/ci.yml/badge.svg)
+
+Garr = Go + libs in a Jar.
 
 Collection of high performance, thread-safe, lock-free go data structures.
 
@@ -15,7 +17,7 @@ Collection of high performance, thread-safe, lock-free go data structures.
 ## Getting started
 
 ```bash
-go get -u github.com/line/garr
+go get -u go.linecorp.com/garr
 ```
 
 ## Examples
@@ -31,7 +33,7 @@ import (
 	"fmt"
 	"time"
 
-	ga "github.com/line/garr/adder"
+	ga "go.linecorp.com/garr/adder"
 )
 
 func main() {
@@ -57,7 +59,7 @@ func main() {
 package prom
 
 import (
-	ga "github.com/line/garr/adder"
+	ga "go.linecorp.com/garr/adder"
 
 	"github.com/prometheus/client_golang/prometheus"
 	dto "github.com/prometheus/client_model/go"
@@ -129,7 +131,7 @@ package main
 import (
     "fmt"
 
-    "github.com/line/garr/queue"
+    "go.linecorp.com/garr/queue"
 )
 
 func main() {
@@ -154,7 +156,7 @@ func main() {
 package main
 
 import (
-    cbreaker "github.com/line/garr/circuit-breaker"
+    cbreaker "go.linecorp.com/garr/circuit-breaker"
 )
 
 func makeRequest() error {

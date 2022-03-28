@@ -1,8 +1,6 @@
-# Garr
+# Garr - Go libs in a Jar
 
 ![CI](https://github.com/line/garr/actions/workflows/ci.yml/badge.svg)
-
-Garr = Go + libs in a Jar.
 
 Collection of high performance, thread-safe, lock-free go data structures.
 

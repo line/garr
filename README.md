@@ -1,6 +1,8 @@
 # Garr - Go libs in a Jar
 
+[![Go Reference](https://pkg.go.dev/badge/go.linecorp.com/garr.svg)](https://pkg.go.dev/go.linecorp.com/garr)
 ![CI](https://github.com/line/garr/actions/workflows/ci.yml/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/go.linecorp.com/garr)](https://goreportcard.com/report/go.linecorp.com/garr)
 
 Collection of high performance, thread-safe, lock-free go data structures.
 

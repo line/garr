@@ -23,7 +23,7 @@ func main() {
     polled := q.Poll()
 
     // return head queue but not remove
-    head := q.Peak()
+    head := q.Peek()
 }
 ```
 

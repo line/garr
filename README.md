@@ -141,7 +141,7 @@ func main() {
     q.Offer(123)
 
     // return head queue but not remove
-    head := q.Peak()
+    head := q.Peek()
     fmt.Println(head)
 
     // remove and return head queue
